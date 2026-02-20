@@ -35,6 +35,7 @@ export default function Navbar() {
         <Link href="/settings" className="hover:text-green-500">
           Settings
         </Link>
+        
 
         <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">
           V
