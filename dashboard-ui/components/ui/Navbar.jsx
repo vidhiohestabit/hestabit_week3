@@ -2,38 +2,44 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="h-16 bg-white border-b flex items-center justify-between px-6">
+    <header className="h-16 bg-white border-b px-6 flex items-center justify-between">
       
-      {/* Left: Logo / Title */}
-      <h1 className="text-lg font-semibold">
-        Purity UI Dashboard
-      </h1>
+      {/* Left: Brand + Nav */}
+      <div className="flex items-center gap-8">
+        <div>
+          <Link href="/" className="text-lg font-bold text-green-500">
+            Purity UI
+          </Link>
+          <p className="text-xs text-gray-400">Admin Dashboard</p>
+        </div>
 
-      {/* Right: Navigation */}
-      <nav className="flex items-center gap-6 text-sm font-medium">
-        
+        {/* Nav Links */}
+        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">
+          <Link href="/about" className="hover:text-green-500">
+            About
+          </Link>
+          
+        </nav>
+      </div>
 
-        <Link
-          href="/settings"
-          className="text-gray-600 hover:text-teal-500"
-        >
-          Settings
-        </Link>
-
-        <Link
-          href="/signin"
-          className="px-3 py-1 rounded-lg border border-teal-500 text-teal-500 hover:bg-teal-50"
-        >
+      {/* Right: Actions */}
+      <div className="flex items-center gap-4">
+        <input
+          placeholder="Search..."
+          className="hidden md:block px-3 py-2 text-sm border rounded-lg focus:outline-none"
+        />
+        <Link href="/signin" className="hover:text-green-500">
           Sign In
         </Link>
 
-        <Link
-          href="/login"
-          className="px-3 py-1 rounded-lg bg-teal-500 text-white hover:bg-teal-600"
-        >
-          Login
+        <Link href="/settings" className="hover:text-green-500">
+          Settings
         </Link>
-      </nav>
+
+        <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">
+          V
+        </div>
+      </div>
 
     </header>
   );

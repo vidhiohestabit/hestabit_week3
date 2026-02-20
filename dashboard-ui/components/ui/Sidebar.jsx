@@ -2,20 +2,32 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 min-h-screen bg-white border-r px-4 py-6">
-      <nav className="space-y-2">
-        <Link href="/dashboard" className="block px-3 py-2 rounded-lg bg-teal-500 text-white">
-          Dashboard
-        </Link>
+    <aside className="w-64 bg-white border-r px-4 py-6 space-y-6">
 
-        <Link href="/dashboard/profile" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
-          Profile
-        </Link>
+      <div>
+        <p className="text-xs text-gray-400 uppercase mb-2">Main</p>
+        <nav className="space-y-1">
+          <Link href="/dashboard" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
+            Dashboard
+          </Link>
+          <Link href="/dashboard/users" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
+            Users
+          </Link>
+        </nav>
+      </div>
 
-        <Link href="/about" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
-          About
-        </Link>
-      </nav>
+      <div>
+        <p className="text-xs text-gray-400 uppercase mb-2">Account</p>
+        <nav className="space-y-1">
+          <Link href="/dashboard/profile" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
+            Profile
+          </Link>
+          <Link href="/login" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
+            Login
+          </Link>
+        </nav>
+      </div>
+
     </aside>
   );
 }
