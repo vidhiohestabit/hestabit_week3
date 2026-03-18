@@ -25,7 +25,7 @@ export default function Sidebar() {
           <Link href="/login" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
             Login
           </Link>
-          {/* ✅ FIXED HERE */}
+          {}
           <Link href="/dashboard/billing" className="block px-3 py-2 rounded-lg hover:bg-gray-100">
             Billing
           </Link>
