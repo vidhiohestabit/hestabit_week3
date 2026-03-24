@@ -17,7 +17,9 @@ export default function SignInPage() {
         </div>
 
         <div className="mt-6">
-          <Button className="w-full">Sign In</Button>
+          <Button className="w-full bg-amber-300 hover:bg-amber-900">
+            Sign In
+          </Button>
         </div>
       </Card>
     </div>

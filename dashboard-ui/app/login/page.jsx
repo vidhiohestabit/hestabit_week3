@@ -1,3 +1,5 @@
+import Input from "../../components/ui/Input";
+
 export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -21,10 +23,10 @@ export default function LoginPage() {
             <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
               🔒
             </span>
-            <input
+            <Input
               type="password"
               placeholder="Password"
-              className="w-full pl-10 pr-4 py-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full pl-10 pr-4 py-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-400!"
             />
           </div>
 
